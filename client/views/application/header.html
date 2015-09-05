@@ -1,0 +1,25 @@
+<template name="header">
+    <nav>
+        <div class="nav-wrapper blue">
+            <a href="{{pathFor 'daysList'}}" class="brand-logo center">
+                <img src="/images/student.png" class="responsive-img" width="60" alt="">
+            </a>
+            <ul class="left">
+                <li><a href="{{pathFor 'daysList'}}"><i class="fa fa-calendar left orange-text"></i>Расписание</a></li>
+                <li><a href="{{pathFor 'pupilsList'}}"><i class="fa fa-users left orange-text"></i>Ученики</a></li>
+                <li><a href="#"><i class="material-icons left orange-text">trending_up</i>Оценки</a></li>
+            </ul>
+            <ul class="right">
+                {{#if isAdmin}}
+                    <li><a href="{{pathFor 'daySubmit'}}"><i class="fa fa-plus left orange-text"></i>День</a></li>
+                    <li><a href="#"><i class="fa fa-cogs left orange-text"></i>Управление</a></li>
+                {{/if}}
+                {{#if currentUser}}
+                    <li><a href="#" id="logout-button"><i class="fa fa-sign-out right orange-text"></i>Выйти</a></li>
+                {{else}}
+                    <li><a href="{{pathFor 'loginPage'}}"><i class="fa fa-sign-in right orange-text"></i>Войти</a></li>
+                {{/if}}
+            </ul>
+        </div>
+    </nav>
+</template>

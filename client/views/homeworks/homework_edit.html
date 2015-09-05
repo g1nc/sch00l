@@ -1,0 +1,30 @@
+<template name="homeworkEdit">
+    <form id="homework-edit">
+        <div class="row center">
+            <h5>Редактирование задания</h5>
+        </div>
+        <div class="row">
+            <div class="col l6 offset-l3">
+                <div class="input-field s12">
+                    <input id="number" type="text" value="{{number}}" required>
+                    <label for="number" class="active">Номер</label>
+                </div>
+                <div class="input-field s12">
+                    <select id="lesson">
+                        {{#each lessons}}
+                            <option value="{{_id}}">{{name}}</option>
+                        {{/each}}
+                    </select>
+                    <label>Урок</label>
+                </div>
+                <div class="input-field s12">
+                    <textarea id="body" class="materialize-textarea">{{body}}</textarea>
+                    <label for="body" class="active">Задание</label>
+                </div>
+                <div class="col s12 center">
+                    <button type="submit" class="waves-effect waves-light btn btn-large blue"><i class="fa fa-check left"></i>сохранить</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</template>

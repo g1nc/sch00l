@@ -1,0 +1,13 @@
+<template name="pupilItem">
+    <div class="col l4 m6 s12">
+        <div class="card-panel">
+            <div class="collapsible-header" style="border-bottom: none; cursor: inherit">
+                <i class="fa fa-user left"></i>{{name}}
+                {{#if admin}}
+                    <a href="#" class="orange-text right pupil-remove"><i class="fa fa-trash" style="margin: 0"></i></a>
+                    <a href="{{pathFor 'pupilEdit'}}" class="blue-text right "><i class="fa fa-pencil" style="margin: 0"></i></a>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</template>

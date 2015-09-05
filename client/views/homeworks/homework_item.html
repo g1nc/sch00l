@@ -1,0 +1,12 @@
+<template name="homeworkItem">
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">class</i>{{lesson}}
+            {{#if admin}}
+                <a href="#" class="orange-text right homework-remove"><i class="fa fa-trash" style="margin: 0"></i></a>
+                <a href="{{pathFor 'homeworkEdit'}}" class="blue-text right"><i class="fa fa-pencil" style="margin: 0"></i></a>
+            {{/if}}
+        </div>
+        <div class="collapsible-body"><p>{{body}}</p></div>
+    </li>
+</template>
