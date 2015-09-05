@@ -10,8 +10,7 @@ Template.daySubmit.events({
         Meteor.call('dayInsert', day, function(error, result) {
             // display the error to the user and abort
             if (error){
-                Materialize.toast(error.reason, 4000);
-                return;
+                return Materialize.toast(error.reason, 4000);
             }
 
             // show this result but route anyway

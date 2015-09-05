@@ -10,6 +10,7 @@
             </ul>
             <ul class="right">
                 {{#if isAdmin}}
+                    <li><a href="{{pathFor 'lessonsList'}}"><i class="material-icons left orange-text">class</i>Уроки</a></li>
                     <li><a href="{{pathFor 'manage'}}"><i class="fa fa-cogs left orange-text"></i>Добавить</a></li>
                 {{/if}}
                 {{#if currentUser}}
