@@ -17,7 +17,7 @@ Template.homeworkEdit.events({
         Homeworks.update(currentHomeworkId, {$set: homeworkProperties}, function(error) {
             if (error) {
                 // display the error to the user
-                alert(error.reason);
+                return Materialize.toast(error.reason, 4000);
             } else {
                 Router.go('daysList');
             }

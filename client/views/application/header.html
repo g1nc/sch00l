@@ -6,13 +6,11 @@
             </a>
             <ul class="left">
                 <li><a href="{{pathFor 'daysList'}}"><i class="fa fa-calendar left orange-text"></i>Расписание</a></li>
-                <li><a href="{{pathFor 'pupilsList'}}"><i class="fa fa-users left orange-text"></i>Ученики</a></li>
-                <li><a href="#"><i class="material-icons left orange-text">trending_up</i>Оценки</a></li>
+                <li><a href="{{pathFor 'pupilsList'}}"><i class="material-icons left orange-text">trending_up</i>Оценки</a></li>
             </ul>
             <ul class="right">
                 {{#if isAdmin}}
-                    <li><a href="{{pathFor 'daySubmit'}}"><i class="fa fa-plus left orange-text"></i>День</a></li>
-                    <li><a href="#"><i class="fa fa-cogs left orange-text"></i>Управление</a></li>
+                    <li><a href="{{pathFor 'manage'}}"><i class="fa fa-cogs left orange-text"></i>Добавить</a></li>
                 {{/if}}
                 {{#if currentUser}}
                     <li><a href="#" id="logout-button"><i class="fa fa-sign-out right orange-text"></i>Выйти</a></li>

@@ -8,9 +8,9 @@ Template.pupilItem.helpers({
 Template.pupilItem.events({
     'click .pupil-remove': function(e,t){
         e.preventDefault();
-        if (confirm("Удалить это задание?")) {
-            var currentHomeworkId = this._id;
-            Homeworks.remove(currentHomeworkId);
+        if (confirm("Удалить этого ученика?")) {
+            var currentPupilId = this._id;
+            Pupils.remove(currentPupilId);
         }
     }
 });
