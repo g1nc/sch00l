@@ -1,8 +1,9 @@
 <template name="manage">
-  <div class="row valign-wrapper" style="height: 85vh">
-    <div class="col l6 offset-l3 m10 offset-m1 s12 center valign">
+  <div class="row">
+    <div class="col l6 offset-l3 m10 offset-m1 s12 center">
+      <h5>Добавление объектов</h5>
       <a href="{{pathFor 'daySubmit'}}" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
-        <i class="fa fa-calendar left"></i><span>день</span>
+        <i class="material-icons left">today</i><span>день</span>
       </a>
       <a href="{{pathFor 'lessonSubmit'}}" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
         <i class="fa fa-cube left"></i><span>урок</span>
@@ -13,9 +14,42 @@
       <a href="{{pathFor 'gradeSubmit'}}" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
         <i class="fa fa-star left"></i><span>оценку</span>
       </a>
-      <a href="#" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
+      <a href="{{pathFor 'userSubmit'}}" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
         <i class="fa fa-user-secret left"></i><span>пользователя</span>
       </a>
+    </div>
+
+    <div class="col l6 offset-l3 m10 offset-m1 s12 center" style="margin-top: 1rem">
+      <h5>Списки объектов</h5>
+      <a href="{{pathFor 'daysList'}}" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
+        <i class="fa fa-calendar left"></i><span>дни</span>
+      </a>
+      <a href="{{pathFor 'lessonsList'}}" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
+        <i class="fa fa-cubes left"></i><span>уроки</span>
+      </a>
+      <a href="{{pathFor 'pupilsList'}}" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
+        <i class="fa fa-users left"></i><span>ученики</span>
+      </a>
+      <a href="{{pathFor 'usersList'}}" class="waves-effect waves-light btn btn-large blue" style="margin-top: 5px">
+        <i class="fa fa-user-secret left"></i><span>пользователи</span>
+      </a>
+    </div>
+
+    <div class="col l12 center" style="margin-top: 1rem">
+      <h5>Список всех дней</h5>
+      <div class="row">
+        {{#each days}}
+        <div class="col l4 m6 s12 day">
+          <div class="card-panel">
+            <h5 style="margin: 0">
+              <span>{{day}}</span>
+              <small class="orange-text">{{date}}</small>
+                <a href="{{pathFor 'dayEdit'}}" class="blue-text right"><i class="fa fa-pencil fa-fw"></i></a>
+            </h5>
+          </div>
+        </div>
+        {{/each}}
+      </div>
     </div>
   </div>
 </template>

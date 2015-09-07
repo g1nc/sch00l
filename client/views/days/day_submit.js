@@ -9,10 +9,11 @@ Template.daySubmit.events({
 
     Meteor.call('dayInsert', day, function(error, result) {
         if (error)
-            return Materialize.toast(error.reason, 4000);
+          return Materialize.toast(error.reason, 4000);
         if (result.dayExists)
-            Materialize.toast('День с такой датой уже добавлен', 4000);
-        Router.go('daysList');
+          Materialize.toast('День с такой датой уже добавлен', 4000);
+        else
+          Materialize.toast('День добавлен', 4000);
     });
   }
 });

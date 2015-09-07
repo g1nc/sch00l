@@ -1,6 +1,6 @@
-Template.dayItem.helpers({
-  admin: function() {
-    return Meteor.user() && Meteor.user().username == 'Supervisor';
+Template.manage.helpers({
+  days: function() {
+    return Days.find();
   },
   date: function() {
     var date = this.date.getDate() < 10 ? '0' + this.date.getDate() : this.date.getDate(),
@@ -19,8 +19,5 @@ Template.dayItem.helpers({
       case 6 : day = 'Суббота'; break;
     }
     return day;
-  },
-  homeworks: function () {
-    return Homeworks.find({dayId: this._id}, {sort: {number: 1}});
   }
 });

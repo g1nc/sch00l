@@ -1,0 +1,18 @@
+<template name="userItem">
+  <div class="col l4 m6 s12 day">
+    <div class="card-panel">
+      <div class="row">
+        <div class="col s10">
+          <h5 style="margin: 0">
+            <span>{{username}}</span>
+          </h5>
+          <span class="orange-text">{{pupil}}</span>
+        </div>
+        <div class="col s2">
+          <a href="#" class="user-remove orange-text right"><i class="fa fa-2x fa-trash"></i></a>
+          <a href="{{pathFor 'userEdit'}}" class="user-edit blue-text right"><i class="fa fa-2x fa-pencil"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
