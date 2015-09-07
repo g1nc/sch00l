@@ -1,46 +1,50 @@
 <template name="dayEdit">
-    <div class="row">
-        <div class="col s12">
-            <div class="row">
-                <div class="col s12 center">
-                    <h5>Редактирование дня</h5>
-                </div>
-                <div class="col l6 offset-l3 m8 offset-m2 s12">
-                    <form id="day-edit">
-                        <div class="row">
-                            <div class="input-field s12">
-                                <i class="material-icons prefix active">today</i>
-                                <input id="date" type="date" value="{{date}}" class="datepicker">
-                                <label for="date" class="active">Дата</label>
-                            </div>
-                            <div class="input-field s12">
-                                <i class="material-icons prefix active">mode_edit</i>
-                                <textarea id="event" class="materialize-textarea">{{event}}</textarea>
-                                <label for="event" class="active">Событие</label>
-                            </div>
-                            <div class="col s12 center">
-                                <button type="submit" class="waves-effect waves-light btn btn-large blue"><i class="material-icons left">done</i>сохранить</button>
-                                <button id="delete" class="waves-effect waves-light btn btn-large orange"><i class="material-icons right">delete</i>удалить</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col s12 center">
-                    <h5>Редактирование заданий</h5>
-                </div>
-                <div class="col m6 s12">
-                    {{> homeworkSubmit}}
-                </div>
-                <div class="col m6 s12">
-                    <ul class="collapsible popout" data-collapsible="accordion">
-                        {{#each homeworks}}
-                            {{> homeworkItem}}
-                        {{/each}}
-                    </ul>
-                </div>
-            </div>
+  <div class="row">
+    <div class="col s12">
+      <div class="row">
+        <div class="col s12 center">
+            <h5>Редактирование дня</h5>
         </div>
+        <div class="col l6 offset-l3 m8 offset-m2 s12">
+          <form id="day-edit">
+            <div class="row">
+              <div class="input-field s12">
+                <i class="material-icons prefix active">today</i>
+                <input id="date" type="date" value="{{date}}" class="datepicker">
+                <label for="date" class="active">Дата</label>
+              </div>
+              <div class="input-field s12">
+                <i class="fa fa-pencil prefix active"></i>
+                <textarea id="event" class="materialize-textarea">{{event}}</textarea>
+                <label for="event" class="active">Событие</label>
+              </div>
+              <div class="col s12 center">
+                <button type="submit" class="waves-effect waves-light btn btn-large blue">
+                  <i class="fa fa-check left"></i><span>сохранить</span>
+                </button>
+                <button id="delete" class="waves-effect waves-light btn btn-large orange">
+                  <i class="fa fa-trash right"></i><span>удалить</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center">
+          <h5>Редактирование заданий</h5>
+        </div>
+        <div class="col m6 s12">
+          {{> homeworkSubmit}}
+        </div>
+        <div class="col m6 s12">
+          <ul class="collapsible popout" data-collapsible="accordion">
+            {{#each homeworks}}
+              {{> homeworkItem}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 </template>

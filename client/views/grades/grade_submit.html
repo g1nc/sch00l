@@ -1,50 +1,50 @@
 <template name="gradeSubmit">
-    <div class="row valign-wrapper" style="height: 85vh">
-        <form class="col l6 offset-l3 m8 offset-m2 s12 valign">
-            <div class="row center" style="margin-bottom: 0">
-                <h5>Добавление оценки</h5>
-            </div>
-            <div class="row">
-                <div class="input-field s12">
-                    <i class="material-icons prefix">today</i>
-                    <input id="date" type="date" class="datepicker">
-                    <label for="date">Дата</label>
-                </div>
-                <div class="input-field s12">
-                    <i class="fa fa-user prefix"></i>
-                    <select id="pupil">
-                        {{#each pupils}}
-                            {{#if currentPupil}}
-                                <option value="{{_id}}" selected>{{name}}</option>
-                            {{else}}
-                                <option value="{{_id}}">{{name}}</option>
-                            {{/if}}
-                        {{/each}}
-                    </select>
-                    <label for="pupil">Ученик</label>
-                </div>
-                <div class="input-field s12">
-                    <i class="material-icons prefix">class</i>
-                    <select id="lesson">
-                        {{#each lessons}}
-                            <option value="{{_id}}">{{name}}</option>
-                        {{/each}}
-                    </select>
-                    <label for="lesson">Урок</label>
-                </div>
-                <div class="input-field s12">
-                    <i class="fa fa-star prefix"></i>
-                    <input id="grade" type="text">
-                    <label for="grade">Оценка</label>
-                </div>
-                <div class="input-field s12">
-                    <textarea id="body" class="materialize-textarea"></textarea>
-                    <label for="body">Подробности</label>
-                </div>
-                <div class="col s12 center">
-                    <button type="submit" class="waves-effect waves-light btn btn-large blue"><i class="material-icons left">add</i>добавить</button>
-                </div>
-            </div>
-        </form>
-    </div>
+  <div class="row valign-wrapper" style="height: 85vh">
+    <form class="col l6 offset-l3 m8 offset-m2 s12 valign">
+      <div class="row center" style="margin-bottom: 0">
+        <h5>Добавление оценки</h5>
+      </div>
+      <div class="row">
+        <div class="input-field s12">
+          <i class="material-icons prefix">today</i>
+          <input id="date" type="date" class="datepicker">
+          <label for="date">Дата</label>
+        </div>
+        <div class="input-field s12">
+          <i class="fa fa-user prefix"></i>
+          <select id="pupil">
+            {{#each pupils}}
+              {{#if currentPupil}}
+                <option value="{{_id}}" selected>{{name}}</option>
+              {{else}}
+                <option value="{{_id}}">{{name}}</option>
+              {{/if}}
+            {{/each}}
+          </select>
+          <label for="pupil">Ученик</label>
+        </div>
+        <div class="input-field s12">
+          <i class="material-icons prefix">class</i>
+          <select id="lesson">
+            {{#each lessons}}
+              <option value="{{_id}}">{{name}}</option>
+            {{/each}}
+          </select>
+          <label for="lesson">Урок</label>
+        </div>
+        <div class="input-field s12">
+          <i class="fa fa-star prefix"></i>
+          <input id="grade" type="text">
+          <label for="grade">Оценка</label>
+        </div>
+        <div class="input-field s12">
+          <textarea id="body" class="materialize-textarea"></textarea>
+          <label for="body">Подробности</label>
+        </div>
+        <div class="col s12 center">
+          <button type="submit" class="waves-effect waves-light btn btn-large blue"><i class="material-icons left">add</i>добавить</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </template>

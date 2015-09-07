@@ -1,18 +1,25 @@
 <template name="daysList">
-    <div class="row" style="margin-top: 1rem">
-        <div class="row">
-            {{#each days}}
-                {{#if firstRow}}
-                    {{> dayItem}}
-                {{/if}}
-            {{/each}}
-        </div>
-        <div class="row">
-            {{#each days}}
-                {{#if secondRow}}
-                    {{> dayItem}}
-                {{/if}}
-            {{/each}}
-        </div>
+  <div class="row" style="margin-top: 1rem">
+    <div class="row">
+      {{#each firstRow}}
+        {{> dayItem}}
+      {{/each}}
     </div>
+    <div class="row">
+      {{#each secondRow}}
+        {{> dayItem}}
+      {{/each}}
+    </div>
+    <div class="divider"></div>
+    <div class="row">
+      {{#each thirdRow}}
+        {{> dayItem}}
+      {{/each}}
+    </div>
+    <div class="row">
+      {{#each fourthRow}}
+        {{> dayItem}}
+      {{/each}}
+    </div>
+  </div>
 </template>

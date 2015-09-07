@@ -1,14 +1,23 @@
 Template.daysList.helpers({
-  days: function(row) {
-    return Days.find({}, {sort: {date: 1}});
-  },
   firstRow: function() {
-    var date = new Date(this.date);
-    return date.getDay() < 4;
+    var date = moment().startOf('week').toDate(),
+        days = Days.find({date: {$gt: date}}, {sort: {date: 1}}).fetch();
+    return days.slice(0,3);
   },
   secondRow: function() {
-    var date = new Date(this.date);
-    return date.getDay() > 3;
+    var date = moment().startOf('week').toDate(),
+        days = Days.find({date: {$gt: date}}, {sort: {date: 1}}).fetch();
+    return days.slice(3,6);
+  },
+  thirdRow: function() {
+    var date = moment().startOf('week').toDate(),
+        days = Days.find({date: {$gt: date}}, {sort: {date: 1}}).fetch();
+    return days.slice(6,9);
+  },
+  fourthRow: function() {
+    var date = moment().startOf('week').toDate(),
+        days = Days.find({date: {$gt: date}}, {sort: {date: 1}}).fetch();
+    return days.slice(9,12);
   }
 });
 

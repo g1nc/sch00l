@@ -1,30 +1,29 @@
 <template name="dayItem">
-    <div class="col l4 m6 s12 day">
-        <div class="row center">
-            <div class="col s12">
-                <h5>
-                    <!--<a href="{{pathFor 'dayPage'}}">{{day}}</a>-->
-                    {{day}}
-                    <small class="orange-text">{{date}}</small>
-                    {{#if currentUser}}
-                        <a href="{{pathFor 'dayEdit'}}" class="blue-text right" style="margin-right: 2rem;"><i class="fa fa-pencil fa-fw"></i></a>
-                    {{/if}}
-                </h5>
-            </div>
-        </div>
-        {{#if event}}
-            <div class="row">
-                <div class="col s12">
-                    <div class="card-panel blue lighten-2">
-                        <span class="white-text">{{event}}</span>
-                    </div>
-                </div>
-            </div>
-        {{/if}}
-        <ul class="collapsible popout" data-collapsible="accordion">
-            {{#each homeworks}}
-                {{> homeworkItem}}
-            {{/each}}
-        </ul>
+  <div class="col l4 m6 s12 day">
+    <div class="row center">
+      <div class="col s12">
+        <h5>
+          <span>{{day}}</span>
+          <small class="orange-text">{{date}}</small>
+          {{#if currentUser}}
+            <a href="{{pathFor 'dayEdit'}}" class="blue-text right" style="margin-right: 2rem;"><i class="fa fa-pencil fa-fw"></i></a>
+          {{/if}}
+        </h5>
+      </div>
     </div>
+    {{#if event}}
+      <div class="row">
+        <div class="col s12">
+          <div class="card-panel blue lighten-2">
+            <span class="white-text">{{event}}</span>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+    <ul class="collapsible popout" data-collapsible="accordion">
+      {{#each homeworks}}
+        {{> homeworkItem}}
+      {{/each}}
+    </ul>
+  </div>
 </template>

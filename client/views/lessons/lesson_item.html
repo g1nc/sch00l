@@ -1,13 +1,13 @@
 <template name="lessonItem">
-    <div class="col l6 m8 offset-m2 s12">
-        <div class="card-panel" style="margin: 0.5rem 0">
-            <div class="collapsible-header" style="border-bottom: none; cursor: inherit; padding: 0; margin: 0;">
-                <i class="material-icons left">class</i>{{name}}
-                {{#if admin}}
-                    <a href="#" class="orange-text right lesson-remove"><i class="fa fa-trash" style="margin: 0"></i></a>
-                    <a href="{{pathFor 'lessonEdit'}}" class="blue-text right "><i class="fa fa-pencil" style="margin: 0"></i></a>
-                {{/if}}
-            </div>
-        </div>
+  <div class="col l6 m8 offset-m2 s12">
+    <div class="card-panel" style="margin: 0.5rem 0">
+      <div class="collapsible-header" style="border-bottom: none; cursor: inherit; padding: 0; margin: 0;">
+        <i class="fa fa-cube left"></i><span>{{name}}</span>
+        {{#if admin}}
+          <a href="#" class="orange-text right lesson-remove"><i class="fa fa-trash" style="margin: 0"></i></a>
+          <a href="{{pathFor 'lessonEdit'}}" class="blue-text right "><i class="fa fa-pencil" style="margin: 0"></i></a>
+        {{/if}}
+      </div>
     </div>
+  </div>
 </template>

@@ -1,21 +1,23 @@
 <template name="loginPage">
-    <div class="row valign-wrapper" style="height: 85vh">
-        <form class="col l6 offset-l3 m8 offset-m2 s12 valign">
-            <div class="row">
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">account_circle</i>
-                    <input id="login-username" type="text" class="validate">
-                    <label for="login-username">Логин</label>
-                </div>
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">lock</i>
-                    <input id="login-password" type="password" class="validate">
-                    <label for="login-password">Пароль</label>
-                </div>
-            </div>
-            <div class="row center">
-                <button type="submit" class="waves-effect waves-light btn btn-large blue"><i class="material-icons right">send</i>войти</button>
-            </div>
-        </form>
-    </div>
+  <div class="row valign-wrapper" style="height: 85vh">
+    <form class="col l6 offset-l3 m8 offset-m2 s12 valign">
+      <div class="row">
+        <div class="input-field col s12">
+          <i class="material-icons prefix">account_circle</i>
+          <input id="login-username" type="text" class="validate">
+          <label for="login-username">Логин</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">lock</i>
+          <input id="login-password" type="password" class="validate">
+          <label for="login-password">Пароль</label>
+        </div>
+      </div>
+      <div class="row center">
+        <button type="submit" class="waves-effect waves-light btn btn-large blue">
+          <i class="material-icons right">send</i><span>войти</span>
+        </button>
+      </div>
+    </form>
+  </div>
 </template>

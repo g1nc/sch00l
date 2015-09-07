@@ -1,54 +1,56 @@
 <template name="gradeEdit">
-    <div class="row valign-wrapper" style="height: 85vh">
-        <form class="col l6 offset-l3 m8 offset-m2 s12 valign">
-            <div class="row center" style="margin-bottom: 0">
-                <h5>Редактирование оценки</h5>
-            </div>
-            <div class="row">
-                <div class="input-field s12">
-                    <i class="material-icons prefix">today</i>
-                    <input id="date" type="date" value={{date}} class="datepicker">
-                    <label for="date" class="active">Дата</label>
-                </div>
-                <div class="input-field s12">
-                    <i class="fa fa-user prefix"></i>
-                    <select id="pupil">
-                        {{#each pupils}}
-                            {{#if currentPupil}}
-                                <option value="{{_id}}" selected>{{name}}</option>
-                            {{else}}
-                                <option value="{{_id}}">{{name}}</option>
-                            {{/if}}
-                        {{/each}}
-                    </select>
-                    <label for="pupil">Ученик</label>
-                </div>
-                <div class="input-field s12">
-                    <i class="material-icons prefix">class</i>
-                    <select id="lesson">
-                        {{#each lessons}}
-                            {{#if currentLesson}}
-                                <option value="{{_id}}" selected>{{name}}</option>
-                            {{else}}
-                                <option value="{{_id}}">{{name}}</option>
-                            {{/if}}
-                        {{/each}}
-                    </select>
-                    <label for="lesson">Урок</label>
-                </div>
-                <div class="input-field s12">
-                    <i class="fa fa-star prefix"></i>
-                    <input id="grade" value="{{value}}" type="text">
-                    <label for="grade" class="active">Оценка</label>
-                </div>
-                <div class="input-field s12">
-                    <textarea id="body" class="materialize-textarea">{{description}}</textarea>
-                    <label for="body">Подробности</label>
-                </div>
-                <div class="col s12 center">
-                    <button type="submit" class="waves-effect waves-light btn btn-large blue"><i class="fa fa-check left"></i>сохранить</button>
-                </div>
-            </div>
-        </form>
-    </div>
+  <div class="row valign-wrapper" style="height: 85vh">
+    <form class="col l6 offset-l3 m8 offset-m2 s12 valign">
+      <div class="row center" style="margin-bottom: 0">
+        <h5>Редактирование оценки</h5>
+      </div>
+      <div class="row">
+        <div class="input-field s12">
+          <i class="material-icons prefix">today</i>
+          <input id="date" type="date" value={{date}} class="datepicker">
+          <label for="date" class="active">Дата</label>
+        </div>
+        <div class="input-field s12">
+          <i class="fa fa-user prefix"></i>
+          <select id="pupil">
+            {{#each pupils}}
+              {{#if currentPupil}}
+                <option value="{{_id}}" selected>{{name}}</option>
+              {{else}}
+                <option value="{{_id}}">{{name}}</option>
+              {{/if}}
+            {{/each}}
+          </select>
+          <label for="pupil">Ученик</label>
+        </div>
+        <div class="input-field s12">
+          <i class="material-icons prefix">class</i>
+          <select id="lesson">
+            {{#each lessons}}
+              {{#if currentLesson}}
+                <option value="{{_id}}" selected>{{name}}</option>
+              {{else}}
+                <option value="{{_id}}">{{name}}</option>
+              {{/if}}
+            {{/each}}
+          </select>
+          <label for="lesson">Урок</label>
+        </div>
+        <div class="input-field s12">
+          <i class="fa fa-star prefix"></i>
+          <input id="grade" value="{{value}}" type="text">
+          <label for="grade" class="active">Оценка</label>
+        </div>
+        <div class="input-field s12">
+          <textarea id="body" class="materialize-textarea">{{description}}</textarea>
+          <label for="body">Подробности</label>
+        </div>
+        <div class="col s12 center">
+          <button type="submit" class="waves-effect waves-light btn btn-large blue">
+            <i class="fa fa-check left"></i><span>сохранить</span>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
 </template>

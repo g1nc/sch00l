@@ -1,19 +1,19 @@
 Meteor.publish('days', function() {
-    return Days.find();
+  return Days.find();
 });
 
 Meteor.publish('lessons', function() {
-    return Lessons.find();
+  return Lessons.find();
 });
 
 Meteor.publish('homeworks', function() {
-    return Homeworks.find();
+  return Homeworks.find();
 });
 
 Meteor.publish('pupils', function() {
-    return Pupils.find();
+  return Pupils.find();
 });
 
 Meteor.publish('grades', function() {
-    return Grades.find();
+  return Grades.find();
 });

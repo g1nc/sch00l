@@ -1,25 +1,27 @@
 <template name="homeworkSubmit">
-    <form id="homework-submit">
-        <div class="row">
-            <div class="input-field s12">
-                <input id="number" type="text" required>
-                <label for="number">Номер</label>
-            </div>
-            <div class="input-field s12">
-                <select id="lesson">
-                    {{#each lessons}}
-                        <option value="{{_id}}">{{name}}</option>
-                    {{/each}}
-                </select>
-                <label>Урок</label>
-            </div>
-            <div class="input-field s12">
-                <textarea id="body" class="materialize-textarea"></textarea>
-                <label for="body">Задание</label>
-            </div>
-            <div class="col s12 center">
-                <button type="submit" class="waves-effect waves-light btn btn-large blue"><i class="material-icons left">add</i>добавить</button>
-            </div>
-        </div>
-    </form>
+  <form id="homework-submit">
+    <div class="row">
+      <div class="input-field s12">
+        <input id="number" type="text" required>
+        <label for="number">Номер</label>
+      </div>
+      <div class="input-field s12">
+        <select id="lesson">
+          {{#each lessons}}
+            <option value="{{_id}}">{{name}}</option>
+          {{/each}}
+        </select>
+        <label>Урок</label>
+      </div>
+      <div class="input-field s12">
+        <textarea id="body" class="materialize-textarea"></textarea>
+        <label for="body">Задание</label>
+      </div>
+      <div class="col s12 center">
+        <button type="submit" class="waves-effect waves-light btn btn-large blue">
+          <i class="material-icons left">add</i><span>добавить</span>
+        </button>
+      </div>
+    </div>
+  </form>
 </template>

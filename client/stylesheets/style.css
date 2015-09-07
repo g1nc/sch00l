@@ -1,38 +1,27 @@
-.day .row {
-    margin-bottom: 0;
-}
-.day .row h5{
-    margin-bottom: 0;
-}
+.day .row { margin-bottom: 0; }
+.day .row h5{ margin-bottom: 0; }
+.day .row .card-panel { margin: 0.5rem 0 0.5rem 0; }
 
-.day .row .card-panel {
-    margin: 0.5rem 0 0.5rem 0;
-}
+.card-panel { padding: 10px; }
 
-.card-panel {
-    padding: 10px;
-}
-
-.collapsible-body p {
-    padding: 1rem;
-}
+.collapsible-body p { padding: 1rem; }
 
 input[type=text]:focus:not([readonly]) + label, input[type=password]:focus:not([readonly]) + label, input[type=email]:focus:not([readonly]) + label, input[type=url]:focus:not([readonly]) + label, input[type=time]:focus:not([readonly]) + label, input[type=date]:focus:not([readonly]) + label, input[type=datetime-local]:focus:not([readonly]) + label, input[type=tel]:focus:not([readonly]) + label, input[type=number]:focus:not([readonly]) + label, input[type=search]:focus:not([readonly]) + label, textarea.materialize-textarea:focus:not([readonly]) + label {
     color: #2196F3; }
 
-.input-field .prefix.active {
-    color: #2196F3; }
+.input-field .prefix.active { color: #2196F3; }
 
 input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly]), input[type=email]:focus:not([readonly]), input[type=url]:focus:not([readonly]), input[type=time]:focus:not([readonly]), input[type=date]:focus:not([readonly]), input[type=datetime-local]:focus:not([readonly]), input[type=tel]:focus:not([readonly]), input[type=number]:focus:not([readonly]), input[type=search]:focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
     border-bottom: 1px solid #2196F3;
     box-shadow: 0 1px 0 0 #2196F3; }
 
-.dropdown-content li > a, .dropdown-content li > span {
-    color: #2196F3;
-}
+.dropdown-content li > a, .dropdown-content li > span { color: #2196F3;}
 
 .pupil-item {
-    border-bottom: none; cursor: inherit; padding: 0; margin: 0;
+    border-bottom: none;
+    cursor: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 .pupil-remove i, .pupil-edit i, .pupil-grade i,
