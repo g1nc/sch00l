@@ -1,6 +1,9 @@
 Template.pupilItem.helpers({
     admin: function(){
-        return Meteor.user().username == 'Supervisor';
+        return Meteor.user() && Meteor.user().username == 'Supervisor';
+    },
+    canSeeGrades: function(){
+        return Meteor.user() && (Meteor.user().pupilId || Meteor.user().username == 'Supervisor');
     }
 });
 
@@ -12,5 +15,10 @@ Template.pupilItem.events({
             var currentPupilId = this._id;
             Pupils.remove(currentPupilId);
         }
+    },
+    'click .pupil-grade': function(e){
+        e.preventDefault();
+        Session.set('currentPupilId', this._id);
+        Router.go('gradeSubmit');
     }
 });

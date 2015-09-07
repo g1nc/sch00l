@@ -10,3 +10,5 @@ iron:router
 accounts-password
 accounts-base
 fortawesome:fontawesome
+momentjs:moment
+aldeed:tabular

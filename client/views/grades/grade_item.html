@@ -1,0 +1,14 @@
+<template name="gradeItem">
+    <tr>
+        <td>{{date}}</td>
+        <td>{{lesson.name}}</td>
+        <td>{{value}}</td>
+        <td>{{description}}</td>
+        {{#if admin}}
+            <td>
+                <a href="#" class="grade-edit blue-text"><i class="fa fa-lg fa-pencil"></i></a>
+                <a href="#" class="grade-remove orange-text"><i class="fa fa-lg fa-trash"></i></a>
+            </td>
+        {{/if}}
+    </tr>
+</template>

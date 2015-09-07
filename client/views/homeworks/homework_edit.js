@@ -1,6 +1,9 @@
 Template.homeworkEdit.helpers({
     lessons: function () {
         return Lessons.find();
+    },
+    currentLesson: function() {
+        return Session.get('currentLessonId') == this._id;
     }
 });
 

@@ -3,7 +3,7 @@ Template.homeworkItem.helpers({
         return Lessons.findOne({_id: this.lessonId}).name;
     },
     admin: function(){
-        return Meteor.user().username == 'Supervisor';
+        return Meteor.user() && Meteor.user().username == 'Supervisor';
     }
 });
 
@@ -11,9 +11,13 @@ Template.homeworkItem.events({
     'click .homework-remove': function(e,t){
         e.preventDefault();
         if (confirm("Удалить это задание?")) {
-            var currentHomeworkId = this._id;
-            Homeworks.remove(currentHomeworkId);
+            Homeworks.remove(this._id);
         }
+    },
+    'click .homework-edit': function(e,t){
+        e.preventDefault();
+        Session.set('currentLessonId', this.lessonId);
+        Router.go('homeworkEdit', {_id: this._id});
     }
 });
 

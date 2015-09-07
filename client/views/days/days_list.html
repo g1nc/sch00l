@@ -1,5 +1,18 @@
 <template name="daysList">
-  {{#each days}}
-    {{> dayItem}}
-  {{/each}}
+    <div class="row" style="margin-top: 1rem">
+        <div class="row">
+            {{#each days}}
+                {{#if firstRow}}
+                    {{> dayItem}}
+                {{/if}}
+            {{/each}}
+        </div>
+        <div class="row">
+            {{#each days}}
+                {{#if secondRow}}
+                    {{> dayItem}}
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
 </template>

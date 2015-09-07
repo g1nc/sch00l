@@ -13,3 +13,7 @@ Meteor.publish('homeworks', function() {
 Meteor.publish('pupils', function() {
     return Pupils.find();
 });
+
+Meteor.publish('grades', function() {
+    return Grades.find();
+});

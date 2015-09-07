@@ -32,8 +32,10 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 }
 
 .pupil-item {
-    display: block;
-    height: 3rem;
-    line-height: 3rem;
-    padding: 0 1rem;
+    border-bottom: none; cursor: inherit; padding: 0; margin: 0;
+}
+
+.pupil-remove i, .pupil-edit i, .pupil-grade i,
+.homework-edit i, .homework-remove i {
+    margin: 0;
 }
