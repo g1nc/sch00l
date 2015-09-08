@@ -1,6 +1,6 @@
 Template.manage.helpers({
   days: function() {
-    return Days.find();
+    return Days.find({}, {sort: {date: -1}});
   },
   date: function() {
     var date = this.date.getDate() < 10 ? '0' + this.date.getDate() : this.date.getDate(),

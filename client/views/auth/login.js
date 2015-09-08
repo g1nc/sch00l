@@ -4,7 +4,7 @@ Template.loginPage.events({
     var username = t.find('#login-username').value,
         password = t.find('#login-password').value;
     Meteor.loginWithPassword(username, password, function(err) {
-      console.log(err);
+      Materialize.toast(err.reason, 4000);
     });
     Router.go('daysList');
   }

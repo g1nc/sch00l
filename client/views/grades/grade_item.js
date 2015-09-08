@@ -1,7 +1,4 @@
 Template.gradeItem.helpers({
-  lesson: function() {
-   return Lessons.findOne({_id: this.lessonId});
-  },
   date: function() {
     var date = this.date.getDate() < 10 ? '0' + this.date.getDate() : this.date.getDate(),
         month = (this.date.getMonth()+1) < 10 ? '0' + (this.date.getMonth()+1) : this.date.getMonth()+1,
@@ -25,4 +22,8 @@ Template.gradeItem.events({
     if (confirm("Удалить эту оценку?"))
       Grades.remove(this._id);
   }
+});
+
+Template.gradeItem.onRendered(function() {
+  $('.tooltipped').tooltip({delay: 50});
 });

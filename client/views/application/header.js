@@ -5,7 +5,8 @@ Template.header.helpers({
 });
 
 Template.header.events({
-  'click #logout-button': function(){
+  'click #logout-button': function(e,t) {
+    e.preventDefault();
     Meteor.logout();
     Router.go('daysList');
   }

@@ -1,14 +1,9 @@
 <template name="gradeItem">
-  <tr>
-    <td>{{date}}</td>
-    <td>{{lesson.name}}</td>
-    <td>{{value}}</td>
-    <td>{{description}}</td>
-    {{#if admin}}
-      <td>
-        <a href="#" class="grade-edit blue-text"><i class="fa fa-lg fa-pencil"></i></a>
-        <a href="#" class="grade-remove orange-text"><i class="fa fa-lg fa-trash"></i></a>
-      </td>
+  <td class="center">
+    <span class="tooltipped" data-position="bottom" data-delay="50" data-tooltip="{{date}} {{description}}">{{value}}</span>
+    {{#if admin}}<br>
+    <a href="#" class="grade-edit blue-text"><i class="fa fa-lg fa-pencil"></i></a>
+    <a href="#" class="grade-remove orange-text"><i class="fa fa-lg fa-trash"></i></a>
     {{/if}}
-  </tr>
+  </td>
 </template>

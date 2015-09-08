@@ -5,23 +5,16 @@
     </div>
     <div class="col l10 offset-l1 m12 s12">
       <h5>Список оценок</h5>
-      <table class="striped">
-        <thead>
-        <tr>
-          <th>Дата</th>
-          <th>Урок</th>
-          <th>Оценка</th>
-          <th>Подробности</th>
-          {{#if admin}}
-            <th>Действия</th>
-          {{/if}}
-        </tr>
-        </thead>
-
+      <table>
         <tbody>
-        {{#each grades}}
-          {{> gradeItem}}
-        {{/each}}
+          {{#each lessons}}
+            <tr>
+              <td>{{name}}</td>
+              {{#each lessonGrades}}
+                {{> gradeItem}}
+              {{/each}}
+            </tr>
+          {{/each}}
         </tbody>
       </table>
     </div>

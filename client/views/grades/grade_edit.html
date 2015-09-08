@@ -43,7 +43,11 @@
         </div>
         <div class="input-field s12">
           <textarea id="body" class="materialize-textarea">{{description}}</textarea>
-          <label for="body">Подробности</label>
+          {{#if description}}
+            <label for="body" class="active">Подробности</label>
+          {{else}}
+            <label for="body">Подробности</label>
+          {{/if}}
         </div>
         <div class="col s12 center">
           <button type="submit" class="waves-effect waves-light btn btn-large blue">
