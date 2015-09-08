@@ -18,7 +18,6 @@ if (Lessons.find().count() == 0) {
 if (Meteor.users.find().count() == 0) {
   Accounts.createUser({
     username: 'Supervisor',
-    email : 'test@test.test',
-    password : 'Supervisor'
+    password : 'Softex2012'
   });
 }
