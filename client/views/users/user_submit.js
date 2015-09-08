@@ -10,10 +10,18 @@ Template.userSubmit.events({
     var user = {
       username: $(e.target).find("#username").val(),
       password: $(e.target).find("#password").val(),
-      pupilId: $(e.target).find("#pupil").val()
+      profile: {
+        pupilId: $(e.target).find("#pupil").val()
+      }
     }
-    Accounts.createUser(user,function(err){
-      console.log(err);
+    Meteor.call('userInsert', user, function(error, result) {
+      if (error)
+        console.log(error);
+      else {
+        Materialize.toast('Пользователь добавлен', 4000);
+        $(e.target).find("#username").val('');
+        $(e.target).find("#password").val('');
+      }
     });
   }
 });

@@ -3,7 +3,7 @@ Template.pupilItem.helpers({
     return Meteor.user() && Meteor.user().username == 'Supervisor';
   },
   canSeeGrades: function(){
-    return Meteor.user() && (Meteor.user().pupilId || Meteor.user().username == 'Supervisor');
+    return Meteor.user() && ((Meteor.user().profile && Meteor.user().profile.pupilId == this._id) || Meteor.user().username == 'Supervisor');
   }
 });
 

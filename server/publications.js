@@ -17,3 +17,7 @@ Meteor.publish('pupils', function() {
 Meteor.publish('grades', function() {
   return Grades.find();
 });
+
+Meteor.publish('accounts', function() {
+  return Meteor.users.find();
+})
