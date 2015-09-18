@@ -27,6 +27,7 @@ Template.gradeEdit.events({
     var $pupil = $(e.target).find('#pupil'),
         $lesson = $(e.target).find('#lesson'),
         $grade = $(e.target).find('#grade'),
+        $not_closed = $(e.target).find('#not-closed'),
         $body = $(e.target).find('#body');
     var date = t.find('#date').value.split('.');
     var gradeProperties = {
@@ -34,6 +35,7 @@ Template.gradeEdit.events({
         pupilId: $pupil.val(),
         lessonId: $lesson.val(),
         value: $grade.val(),
+        not_closed: $not_closed.prop('checked'),
         description: $body.val()
     };
     Grades.update(this._id, {$set: gradeProperties}, function(error) {

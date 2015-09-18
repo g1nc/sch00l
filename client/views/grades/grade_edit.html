@@ -41,7 +41,16 @@
           <input id="grade" value="{{value}}" type="text">
           <label for="grade" class="active">Оценка</label>
         </div>
+        <p style="margin: 0.5rem 0 0.5rem 3rem">
+          {{#if not_closed}}
+            <input id="not-closed" type="checkbox" checked="checked"/>
+          {{else}}
+            <input id="not-closed" type="checkbox"/>
+          {{/if}}
+          <label for="not-closed">Не закрыта</label>
+        </p>
         <div class="input-field s12">
+          <i class="fa fa-pencil prefix"></i>
           <textarea id="body" class="materialize-textarea">{{description}}</textarea>
           {{#if description}}
             <label for="body" class="active">Подробности</label>

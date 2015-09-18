@@ -28,3 +28,8 @@ input[type=text]:focus:not([readonly]), input[type=password]:focus:not([readonly
 .homework-edit i, .homework-remove i {
     margin: 0;
 }
+
+.grade.not-closed {
+  color: red;
+  font-weight: bolder;
+}

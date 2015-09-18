@@ -17,13 +17,16 @@ Template.gradeSubmit.events({
         $pupil = $(e.target).find('#pupil'),
         $lesson = $(e.target).find('#lesson'),
         $grade = $(e.target).find('#grade'),
+        $not_closed = $(e.target).find('#not-closed'),
         $body = $(e.target).find('#body');
+    debugger;
     var date = $date.val().split('.');
     var grade = {
         date: new Date(date[1]+'.'+date[0]+'.'+date[2]),
         pupilId: $pupil.val(),
         lessonId: $lesson.val(),
         value: $grade.val(),
+        not_closed: $not_closed.prop('checked'),
         description: $body.val()
     };
 
