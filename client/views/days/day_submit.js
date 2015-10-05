@@ -20,6 +20,7 @@ Template.daySubmit.events({
 
 Template.daySubmit.onRendered(function(){
   $('.datepicker').pickadate({
+    firstDay: 1,
     selectMonths: true,// Creates a dropdown to control month
     selectYears: 2,// Creates a dropdown of 15 years to control year
     // The title label to use for the month nav buttons

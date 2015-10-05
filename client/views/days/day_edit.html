@@ -1,6 +1,7 @@
 <template name="dayEdit">
   <div class="row">
     <div class="col s12">
+     
       <div class="row">
         <div class="col s12 center">
             <h5>Редактирование дня</h5>
@@ -8,12 +9,12 @@
         <div class="col l6 offset-l3 m8 offset-m2 s12">
           <form id="day-edit">
             <div class="row">
-              <div class="input-field s12">
+              <div class="input-field col s12">
                 <i class="material-icons prefix active">today</i>
                 <input id="date" type="date" value="{{date}}" class="datepicker">
                 <label for="date" class="active">Дата</label>
               </div>
-              <div class="input-field s12">
+              <div class="input-field col s12">
                 <i class="fa fa-pencil prefix active"></i>
                 <textarea id="event" class="materialize-textarea">{{event}}</textarea>
                 <label for="event" class="active">Событие</label>
@@ -26,10 +27,23 @@
                   <i class="fa fa-trash right"></i><span>удалить</span>
                 </button>
               </div>
+              <div class="col s12 center">
+                <div class="input-field col s6">
+                  <i class="material-icons prefix active">today</i>
+                  <input id="date-copy" type="date" value="{{date}}" class="datepicker">
+                  <label for="date-copy" class="active">Дата</label>
+                </div>
+                <div class="input-field col s6">
+                  <a id="day-copy" class="waves-effect waves-light btn btn-large green">
+                    <i class="fa fa-copy left"></i><span>Копировать</span>
+                  </a>
+                </div>
+              </div>
             </div>
           </form>
         </div>
       </div>
+      
       <div class="row">
         <div class="col s12 center">
           <h5>Редактирование заданий</h5>
@@ -45,6 +59,7 @@
           </ul>
         </div>
       </div>
+      
     </div>
   </div>
 </template>

@@ -48,15 +48,52 @@ Template.dayEdit.events({
     };
     Meteor.call('homeworkInsert', homework, function(error, result) {
       if (error)
-        return Materialize.toast(error.reason, 4000);
+      	return Materialize.toast(error.reason, 4000);
     });
+  },
+  
+  'click #day-copy': function(event, template) {
+    event.preventDefault();
+    var homeworks = Homeworks.find({'dayId': this._id}).fetch();
+		var date = template.find('#date-copy').value.split('.'),
+        day = {
+          date: new Date(date[1]+'.'+date[0]+'.'+date[2]),
+          event: ''
+        };
+		Meteor.call('dayInsert', day, function(error, result) {
+        if (error)
+          return Materialize.toast(error.reason, 4000);
+        if (result.dayExists)
+          Materialize.toast('День с такой датой уже добавлен', 4000);
+        else {
+					_.each(homeworks, function(e, i){
+						debugger;
+						var homework = {
+							dayId: result._id,
+							number: e.number,
+							lessonId: e.lessonId,
+							body: ''
+						};
+						
+						Meteor.call('homeworkInsert', homework, function(error, result) {
+							if (error)
+								return Materialize.toast(error.reason, 4000);
+						});
+					});
+					Router.go('daysList');
+					Materialize.toast('День добавлен', 4000);
+				}
+    });
+		
   }
 });
 
 Template.dayEdit.onRendered(function(){
+  $('.modal-trigger').leanModal();
   $(".collapsible").collapsible();
   $('select').material_select();
   $('.datepicker').pickadate({
+    firstDay: 1,
     selectMonths: true,// Creates a dropdown to control month
     selectYears: 2,// Creates a dropdown of 15 years to control year
     // The title label to use for the month nav buttons
